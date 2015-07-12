@@ -1,0 +1,14 @@
+Instructions: 
+Use command prompt to compile and execute (Tested using Java 8 on windows)
+
+1. To compile:
+javac App.java
+2. To Run
+java App < test1.txt
+
+Where test1.txt can have commands in it. 
+One can also simply calls "java App" which will require user to enter commands manually.
+
+In file App.java one can uncomment the line at line no 49 which in turn will output the 
+internal state simple database.
+ 
