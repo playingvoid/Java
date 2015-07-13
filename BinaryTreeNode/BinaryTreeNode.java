@@ -16,6 +16,12 @@ public class BinaryTreeNode
 		right = null;
 	}
 	
+	@Override
+	public String toString()
+	{
+		return Integer.toString(this.value);
+	}
+	
 	public static void preorderTraversalRecursive(BinaryTreeNode root)
 	{
 		if(root == null)
