@@ -2,6 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="ParingParanthesis"/>
 	<classpathentry kind="src" path="Thumstack-simpledatabase-challenge"/>
+	<classpathentry kind="src" path="BinaryTreeNode"/>
+	<classpathentry kind="src" path="InorderIterator"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
