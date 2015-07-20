@@ -4,7 +4,7 @@ public class InorderIterator
 {
 	private BinaryTreeNode tracker;
 	private BinaryTreeNode next;
-	Stack<BinaryTreeNode> stack;
+	private Stack<BinaryTreeNode> stack;
 	
 	public InorderIterator(BinaryTreeNode root)
 	{
@@ -48,7 +48,6 @@ public class InorderIterator
 	
 	public static void main(String[] args) 
 	{
-		
 		BinaryTreeNode root = BinaryTreeNode.createBinaryTree(new Integer[] {1, 2, null, null, 3, null, null });
 		InorderIterator ioItr = new InorderIterator(root);
 		while(ioItr.hasNext())

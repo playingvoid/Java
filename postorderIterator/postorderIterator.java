@@ -4,7 +4,7 @@ public class postorderIterator
 {
 	private BinaryTreeNode tracker;
 	private BinaryTreeNode next;
-	Stack<BinaryTreeNode> stack;
+	private Stack<BinaryTreeNode> stack;
 	
 	public postorderIterator(BinaryTreeNode root)
 	{
@@ -58,7 +58,6 @@ public class postorderIterator
 	
 	public static void main(String[] args) 
 	{
-		
 		BinaryTreeNode root = BinaryTreeNode.createBinaryTree(new Integer[] {1, 2, null, null, 3, null, null });
 		postorderIterator ioItr = new postorderIterator(root);
 		while(ioItr.hasNext())
