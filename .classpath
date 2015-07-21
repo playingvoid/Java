@@ -6,6 +6,8 @@
 	<classpathentry kind="src" path="InorderIterator"/>
 	<classpathentry kind="src" path="postorderIterator"/>
 	<classpathentry kind="src" path="DP-Wordbreak"/>
+	<classpathentry kind="src" path="Quantcast-Spreadsheet"/>
+	<classpathentry kind="src" path="Quantcast-Honeycomb"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
