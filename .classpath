@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="ParingParanthesis"/>
-	<classpathentry kind="src" path="Thumstack-simpledatabase-challenge"/>
+	<classpathentry kind="src" path="simpledatabase-challenge"/>
 	<classpathentry kind="src" path="BinaryTreeNode"/>
 	<classpathentry kind="src" path="InorderIterator"/>
 	<classpathentry kind="src" path="postorderIterator"/>
