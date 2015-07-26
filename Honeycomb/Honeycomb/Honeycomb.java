@@ -106,6 +106,7 @@ public class Honeycomb
 		return false;
 	}
 	
+	//Back tracking graph exploration - exponential algorithm --  can we do better?
 	public boolean findWord(Node currNode, String word, HashSet<Integer> visited)
 	{
 		if(word.length() == 0) return true;
