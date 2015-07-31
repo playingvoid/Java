@@ -1,4 +1,4 @@
-package LruCacheImplPkg;
+package LRUCacheImplementation;
 
 import java.util.HashMap;
 import java.util.Map.Entry;

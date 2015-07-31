@@ -1,4 +1,4 @@
-package LruCacheImplPkg;
+package LRUCacheImplementation;
 
 public class TestLRUCache 
 {

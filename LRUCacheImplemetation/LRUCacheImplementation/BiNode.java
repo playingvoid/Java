@@ -1,4 +1,4 @@
-package LruCacheImplPkg;
+package LRUCacheImplementation;
 
 //Should be a static nested class inside LRUCache cache
 public class BiNode 

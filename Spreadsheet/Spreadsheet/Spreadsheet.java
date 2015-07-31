@@ -1,11 +1,12 @@
 package Spreadsheet;
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
+import Utility.Utility;
 
 class Cell
 {
@@ -221,13 +222,18 @@ public class Spreadsheet
 			System.out.println(c.print());
 	}
 	
+	private static String getInputFile()
+	{
+		return Utility.getFileNameInWorkingDirectory(Spreadsheet.class, "inputfile.txt");
+	}
+	
 	public static void runDFS()
 	{
 		try
 		{			
 			BufferedReader br = 
-                    new BufferedReader(new InputStreamReader(System.in));
-			        //new BufferedReader(new FileReader("inputfile.txt"));
+                    // new BufferedReader(new InputStreamReader(System.in));
+			        new BufferedReader(new FileReader(getInputFile()));
 			
 			String line = null;
 			line = br.readLine();
@@ -253,8 +259,8 @@ public class Spreadsheet
 		try
 		{			
 			BufferedReader br = 
-                    new BufferedReader(new InputStreamReader(System.in));
-			        //new BufferedReader(new FileReader("inputfile.txt"));
+                    // new BufferedReader(new InputStreamReader(System.in));
+			        new BufferedReader(new FileReader(getInputFile()));
 			
 			String line = null;
 			line = br.readLine();

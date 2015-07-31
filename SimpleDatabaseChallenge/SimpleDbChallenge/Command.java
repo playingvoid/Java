@@ -1,3 +1,4 @@
+package SimpleDbChallenge;
 public enum Command 
 {
 	GET,

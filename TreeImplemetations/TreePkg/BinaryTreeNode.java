@@ -1,3 +1,5 @@
+package TreePkg;
+
 public class BinaryTreeNode 
 {
 	public int value;
