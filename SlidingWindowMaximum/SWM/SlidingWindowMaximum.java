@@ -5,7 +5,7 @@ import java.util.Deque;
 
 public class SlidingWindowMaximum 
 {
-	public static int[] populateMaximum(int[] input, int window)
+	public static int[] getMaximums(int[] input, int window)
 	{
 		if(input == null || input.length == 0 || window <= 0)
 			throw new RuntimeException("Invalid input parameter");
@@ -46,12 +46,12 @@ public class SlidingWindowMaximum
 	public static void main(String[] args) 
 	{
 		int[] input = new int[]{1, 3, -1, -3, 5, 3, 6, 7};
-		int[] output = populateMaximum(input, 3);
+		int[] output = getMaximums(input, 3);
 		for(int i : output)
 			System.out.print(i + "\t");
 		System.out.println();
 		input = new int[]{1, 3, -1, -3, 5};
-		output = populateMaximum(input, 10);
+		output = getMaximums(input, 10);
 		for(int i : output)
 			System.out.print(i + "\t");
 	}
