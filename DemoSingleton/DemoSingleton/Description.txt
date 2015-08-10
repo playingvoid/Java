@@ -1,0 +1,4 @@
+Examples from: 
+http://howtodoinjava.com/2012/10/22/singleton-design-pattern-in-java/
+Also read:
+https://en.wikipedia.org/wiki/Double-checked_locking#Usage_in_Java
