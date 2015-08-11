@@ -12,6 +12,7 @@
 	<classpathentry kind="src" path="Utility"/>
 	<classpathentry kind="src" path="SlidingWindowMaximum"/>
 	<classpathentry kind="src" path="DemoSingleton"/>
+	<classpathentry kind="src" path="StupidHashMap"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
