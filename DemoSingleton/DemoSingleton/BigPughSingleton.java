@@ -2,7 +2,7 @@ package DemoSingleton;
 
 public class BigPughSingleton 
 {
-	private static final long serialVersionUID = 1L;
+	protected static final long serialVersionUID = 1L;
 	
 	private BigPughSingleton() {}
 	

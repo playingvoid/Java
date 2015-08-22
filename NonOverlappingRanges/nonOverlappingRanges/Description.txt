@@ -1,0 +1,13 @@
+Write a function that takes a list of integer ranges and an additional range and 
+efficiently prints all non-overlapping ranges from the additional range.
+
+For example, given a list or ranges 
+[6000000 – 10000000], [17000000 – 24000000], [15000000 – 19000000] 
+and a new range 
+[8000000 – 28000000], 
+your function should print 
+[10000001 – 14999999], [24000001 - 28000000].
+
+The only guarantee is the range is valid i.e. range.start<= range.end.  
+Try to avoid making any other assumptions but if you do make other assumptions, 
+make sure you mention those explicitly

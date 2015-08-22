@@ -43,7 +43,7 @@ public class Wordbreak
 	}
 	
 	
-	private static void printBreakable(boolean[][] breakable)
+	protected static void printBreakable(boolean[][] breakable)
 	{
 		for(int i= 0;i<breakable.length;i++)
 		{
