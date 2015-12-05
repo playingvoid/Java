@@ -1,0 +1,3 @@
+http://articles.leetcode.com/2011/01/sliding-window-maximum.html
+
+Challenge is to solve the problem in O(n)
