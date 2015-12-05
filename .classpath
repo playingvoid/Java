@@ -17,6 +17,7 @@
 	<classpathentry kind="src" path="CountOccurenceInSortedArray"/>
 	<classpathentry kind="src" path="NonOverlappingRanges"/>
 	<classpathentry kind="src" path="SimpleThreadSafeQueue"/>
+	<classpathentry kind="src" path="Array-SlidingWindowMaximum"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
