@@ -2,7 +2,7 @@ package TowerOfHanoi;
 
 public class TWHIterative {
 	
-	private static void moveBetweenStack(Tower<Integer> source, Tower<Integer> destination){
+	private static void moveBetweenTower(Tower<Integer> source, Tower<Integer> destination){
 		if(source == null || source.isEmpty())
 			throw new RuntimeException("Invalid source tower");
 		Integer elemToMove = source.pop();
@@ -11,18 +11,18 @@ public class TWHIterative {
 		destination.push(elemToMove);	
 	}
 	
-	private static void moveTopElementBetweenStack(Tower<Integer> tower1, Tower<Integer> tower2){
+	private static void moveTopElementBetweenTower(Tower<Integer> tower1, Tower<Integer> tower2){
 		if(tower1 == null || tower2 == null || (tower1.isEmpty() && tower2.isEmpty()))
 			throw new RuntimeException("Invalid tower entries");
 		
 		if(tower1.isEmpty())
-			moveBetweenStack(tower2, tower1);
+			moveBetweenTower(tower2, tower1);
 		else if(tower2.isEmpty())
-			moveBetweenStack(tower1,  tower2);
+			moveBetweenTower(tower1,  tower2);
 		else if(tower1.peek() > tower2.peek())
-			moveBetweenStack(tower2, tower1);
+			moveBetweenTower(tower2, tower1);
 		else if(tower2.peek() > tower1.peek())
-			moveBetweenStack(tower1,  tower2);
+			moveBetweenTower(tower1,  tower2);
 		else
 			throw new RuntimeException("Programming error - check the situation");
 	}
@@ -44,11 +44,11 @@ public class TWHIterative {
 		for(int step = 1; step <= totalStepsRequiredToMoveElements; step ++){
 			
 			if(step % 3 == 1)
-				moveTopElementBetweenStack(source, destination);
+				moveTopElementBetweenTower(source, destination);
 			else if (step % 3 == 2)
-				moveTopElementBetweenStack(source, buffer);
+				moveTopElementBetweenTower(source, buffer);
 			else // if (step % 3 == 0)
-				moveTopElementBetweenStack(destination, buffer);	
+				moveTopElementBetweenTower(destination, buffer);	
 		}
 	}
 }
