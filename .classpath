@@ -19,6 +19,7 @@
 	<classpathentry kind="src" path="SimpleThreadSafeQueue"/>
 	<classpathentry kind="src" path="Array-SlidingWindowMaximum"/>
 	<classpathentry kind="src" path="TowerOfHanoi"/>
+	<classpathentry kind="src" path="Array - Longest Monotonic"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
