@@ -20,6 +20,8 @@
 	<classpathentry kind="src" path="Array-SlidingWindowMaximum"/>
 	<classpathentry kind="src" path="TowerOfHanoi"/>
 	<classpathentry kind="src" path="Array - Longest Monotonic"/>
+	<classpathentry kind="src" path="SimpleRecursions"/>
+	<classpathentry kind="src" path="MinimumWindowSubstring"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
