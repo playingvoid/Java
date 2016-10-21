@@ -1,4 +1,3 @@
-This is the md file
 Problem Statement:
 
 http://www.glassdoor.com/Interview/Implement-a-function-string-balanceParanthesis-string-s-which-given-a-string-s-consisting-of-some-parenthesis-returns-a-s-QTN_181725.htm
