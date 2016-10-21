@@ -1,4 +1,4 @@
-package LongestMonotonic;
+package arrayProblems.longestMonotonic;
 
 public class MonotonicArray 
 {
@@ -18,7 +18,7 @@ public class MonotonicArray
 		
 		globalResult.startIndex = 0;
 		globalResult.endIndex = 0;
-		globalResult.length = 0;
+		globalResult.length = 1;
 		
 		currResult.startIndex = 0;
 		currResult.endIndex = 0;
