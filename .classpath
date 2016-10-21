@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="ParingParanthesis"/>
 	<classpathentry kind="src" path="SimpleDatabaseChallenge"/>
 	<classpathentry kind="src" path="InOrderIterator"/>
 	<classpathentry kind="src" path="PostOrderIterator"/>
-	<classpathentry kind="src" path="DP-Wordbreak"/>
+	<classpathentry kind="src" path="DP"/>
 	<classpathentry kind="src" path="Spreadsheet"/>
 	<classpathentry kind="src" path="Honeycomb"/>
 	<classpathentry kind="src" path="LRUCacheImplemetation"/>
@@ -22,6 +21,20 @@
 	<classpathentry kind="src" path="Array - Longest Monotonic"/>
 	<classpathentry kind="src" path="SimpleRecursions"/>
 	<classpathentry kind="src" path="MinimumWindowSubstring"/>
+	<classpathentry kind="src" path="Backtracking"/>
+	<classpathentry kind="src" path="MergingIntervals"/>
+	<classpathentry kind="src" path="SquareRoot"/>
+	<classpathentry kind="src" path="KSubset"/>
+	<classpathentry kind="src" path="SampeTest"/>
+	<classpathentry kind="src" path="KthElement"/>
+	<classpathentry kind="src" path="BlackrockInterview"/>
+	<classpathentry kind="src" path="EPI"/>
+	<classpathentry kind="src" path="FileSystemSimulation"/>
+	<classpathentry kind="src" path="SocialNetwork"/>
+	<classpathentry kind="src" path="SalesforceInterview"/>
+	<classpathentry kind="src" path="ConcurrencyPractice"/>
+	<classpathentry kind="src" path="CodingProblems"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
