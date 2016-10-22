@@ -1,31 +1,27 @@
-package WordCount;
+package stringProblems.wordCount;
 
-public class WordCount 
-{
-	static Integer stringWordCount(String input)
-	{
-		if(input == null) return null;
-		
+public class WordCount {
+	static Integer stringWordCount(String input) {
+		if (input == null)
+			return null;
+
 		boolean wordCountStarted = false;
 		int wordCount = 0;
-		for(int i = 0; i< input.length(); i++)
-		{
-			if(input.charAt(i) != ' ')
-			{
-				if(wordCountStarted) continue;
-				else
-				{
-					wordCount++;  wordCountStarted = true;
+		for (int i = 0; i < input.length(); i++) {
+			if (input.charAt(i) != ' ') {
+				if (wordCountStarted)
+					continue;
+				else {
+					wordCount++;
+					wordCountStarted = true;
 				}
-			}
-			else
+			} else
 				wordCountStarted = false;
 		}
 		return wordCount;
 	}
-	
-	public static void main(String args[])
-	{
+
+	public static void main(String args[]) {
 		System.out.println("null: " + stringWordCount(null));
 		System.out.println("a:" + stringWordCount("a"));
 		System.out.println(":" + stringWordCount(""));

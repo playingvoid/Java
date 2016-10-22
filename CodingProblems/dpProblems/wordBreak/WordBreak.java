@@ -1,9 +1,9 @@
-package WordBreak;
+package dpProblems.wordBreak;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Wordbreak 
+public class WordBreak 
 {
 	static Set<String> givenWords
 		= new HashSet<String>(Arrays.asList("i", "a", "am", "man"));

@@ -3,7 +3,6 @@
 	<classpathentry kind="src" path="SimpleDatabaseChallenge"/>
 	<classpathentry kind="src" path="InOrderIterator"/>
 	<classpathentry kind="src" path="PostOrderIterator"/>
-	<classpathentry kind="src" path="DP"/>
 	<classpathentry kind="src" path="Spreadsheet"/>
 	<classpathentry kind="src" path="Honeycomb"/>
 	<classpathentry kind="src" path="LRUCacheImplemetation"/>
@@ -11,7 +10,6 @@
 	<classpathentry kind="src" path="Utility"/>
 	<classpathentry kind="src" path="DemoSingleton"/>
 	<classpathentry kind="src" path="StupidHashMap"/>
-	<classpathentry kind="src" path="SimpleWordCount"/>
 	<classpathentry kind="src" path="CountOccurenceInSortedArray"/>
 	<classpathentry kind="src" path="NonOverlappingRanges"/>
 	<classpathentry kind="src" path="SimpleThreadSafeQueue"/>
