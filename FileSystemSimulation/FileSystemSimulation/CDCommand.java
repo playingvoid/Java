@@ -1,4 +1,4 @@
-package FileSystemSimulation;
+package fileSystemSimulation;
 
 public class CDCommand extends Command {
 

@@ -1,4 +1,4 @@
-package FileSystemSimulation;
+package fileSystemSimulation;
 
 public class File extends Folder {
 	public File(String name){

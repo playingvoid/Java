@@ -1,4 +1,4 @@
-package FileSystemSimulation;
+package fileSystemSimulation;
 
 public abstract class Command {
 	protected String[] commands;

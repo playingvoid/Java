@@ -1,4 +1,4 @@
-package FileSystemSimulation;
+package fileSystemSimulation;
 
 import java.util.LinkedHashMap;
 

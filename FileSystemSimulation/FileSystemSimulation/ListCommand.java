@@ -1,4 +1,4 @@
-package FileSystemSimulation;
+package fileSystemSimulation;
 
 public class ListCommand extends Command {	
 	protected ListCommand(String[] commands) {
