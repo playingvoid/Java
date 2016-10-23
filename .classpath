@@ -30,6 +30,7 @@
 	<classpathentry kind="src" path="SalesforceInterview"/>
 	<classpathentry kind="src" path="ConcurrencyPractice"/>
 	<classpathentry kind="src" path="CodingProblems"/>
+	<classpathentry kind="src" path="Netsuite"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
