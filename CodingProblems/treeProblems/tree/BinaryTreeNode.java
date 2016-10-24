@@ -1,4 +1,4 @@
-package TreePkg;
+package treeProblems.tree;
 
 public class BinaryTreeNode 
 {
@@ -60,6 +60,12 @@ public class BinaryTreeNode
 		return createBinaryTree(array, new IntWrapper());
 	}
 	
+	public static BinaryTreeNode createBinaryTree2(Integer[] array)
+	{
+		if(null == array) return null;
+		return createBinaryTree2(array, new IntWrapper());
+	}
+	
 	private static BinaryTreeNode createBinaryTree(Integer[] array, IntWrapper index)
 	{
 		if(index.value >= array.length)
@@ -71,6 +77,18 @@ public class BinaryTreeNode
 		root.left = createBinaryTree(array, index);
 		index.value++;
 		root.right = createBinaryTree(array, index);
+		return root;
+	}
+	
+	private static BinaryTreeNode createBinaryTree2(Integer[] array, IntWrapper index)
+	{
+		int i = index.value;
+		index.value++;
+		if(array[i] == null)
+			return null;
+		BinaryTreeNode root = new BinaryTreeNode(array[i]);
+		root.left = createBinaryTree2(array, index);
+		root.right = createBinaryTree2(array, index);
 		return root;
 	}
 }

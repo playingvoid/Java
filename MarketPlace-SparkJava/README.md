@@ -51,9 +51,9 @@ At some point suppose notification system runs again. This time it should not ge
 9. It is the change in *price per month* (see API **/planprice**) for a *plan* which triggers the core logic of system, i.e. the registering of all the *users(observers)* for a *plan(observable)* with the *notification system*. – ***Observer pattern***.
 10. A separate system, **Notification System**, is supposed to generate *notifications*. Once ran it clears out all the generated *notifications* from the system.
 
-## System/project Limitations
+## System/project Limitations  
 1. Adding a *plan* happens by reading *plans* from a json file when the system (server) starts. This is the only way *plans* can be added to system as of now. No RESTful API is provided to add a plan. Though the functionality has been provided to *Market place* and tested by integration test using Junit.
-2. No ***RESTful API*** is provided for *Un Sign Up*. Though the functionality has been provided to *Market place* and tested by integration test using *Junit*.
+2. No ***RESTful API*** is provided for *Un Sign Up*. Though the functionality has been provided to *Market place* and tested by integration test using *JUnit*.
 3. No database or persistence of any data is provided, so if a server stops or crashes all the previous data/state/actions will be lost. This is done purposefully not to have any data base dependency for this coding challenge. I am planning to use *H2 DB* in later version of this project
 4. Ideally system should be designed with support of database and persistence, but I believe scope and effort of problem would have increased drastically. I agree that in presence of database, design could have been completely different. - Lets see if I get time to code another version or not.
 5. **Only one** *API interface* is provided for all actions like adding a user and generating notifications. Ideally in real world this could have been handled separately, especially it doesn’t look good to have API to generate notifications.
@@ -63,7 +63,7 @@ At some point suppose notification system runs again. This time it should not ge
 
 ## System Design:
 ### Verbs
-System has been visualized in terms of RESTful APIs. See further for section **Sample Requests**:
+System has been visualized in terms of RESTful APIs. See further for section **Sample Requests**:  
 1. ***Add*** an InternetPlan (RESTApi support is not provided for this, but tested via unit test framework)  
 2. ***Add/Update*** an User (see SampleRequest.txt )  
 3. ***SignUp*** an existing User for an existing InternetPlan for a Threshold (see SampleRequest.txt )  
@@ -74,7 +74,7 @@ System has been visualized in terms of RESTful APIs. See further for section **S
 8. ***Generate*** and Clears all notifications from the system (see SampleRequest.txt )  
 
 ### Components / Classes:
-Components are not designed in terms of Interfaces or abstract classes. In current problem scope I decided not to use it. In later versions I'll introduce it. Every class is concrete in nature. Singleton pattern are used basically because there is no database support. 
+Components are not designed in terms of Interfaces or abstract classes. In current problem scope I decided not to use it. In later versions I'll introduce it. Every class is concrete in nature. Singleton pattern are used basically because there is no database support  
 1. **Main**: Definition of service end points. sparkjava web framework (http://sparkjava.com/) to have a light weight REST based system in place. You need to have Java 8 installed (needs java path variables configurations)  
 2. **MarketPlace**: (Singleton) Maintains market place data – basically Users and Plans. This is also the main entry point of all logical operations (APIs) in the Market place system.  
 3. **InternetPlan**: Encapsulate an internet plan. Encapsulates all the user who are signing up for a concrete plan.

@@ -1,15 +1,15 @@
-package InOrderIterator;
+package treeProblems.postOrderItrerator;
+
 import java.util.Stack;
+import treeProblems.tree.BinaryTreeNode;
 
-import TreePkg.BinaryTreeNode;
-
-public class InorderIterator 
+public class postorderIterator 
 {
 	private BinaryTreeNode tracker;
 	private BinaryTreeNode next;
 	private Stack<BinaryTreeNode> stack;
 	
-	public InorderIterator(BinaryTreeNode root)
+	public postorderIterator(BinaryTreeNode root)
 	{
 		tracker = root;
 		stack = new Stack<BinaryTreeNode>();
@@ -37,14 +37,24 @@ public class InorderIterator
 		{
 			if(null != tracker)
 			{
+				if(null != tracker.right)
+					stack.push(tracker.right);
 				stack.push(tracker);
 				tracker = tracker.left;
 			}
 			else
 			{
 				next = stack.pop();
-				tracker = next.right;
-				return;
+				if(!stack.isEmpty() && next.right == stack.peek())
+				{
+					tracker = stack.pop();
+					stack.push(next);
+				}
+				else
+				{
+					tracker = null;
+					return;
+				}
 			}
 		}
 	}
@@ -52,7 +62,7 @@ public class InorderIterator
 	public static void main(String[] args) 
 	{
 		BinaryTreeNode root = BinaryTreeNode.createBinaryTree(new Integer[] {1, 2, null, null, 3, null, null });
-		InorderIterator ioItr = new InorderIterator(root);
+		postorderIterator ioItr = new postorderIterator(root);
 		while(ioItr.hasNext())
 		{
 			BinaryTreeNode next = ioItr.next();
@@ -62,5 +72,4 @@ public class InorderIterator
 		System.out.println();
 		System.out.println("SUCCESS");
 	}
-
 }

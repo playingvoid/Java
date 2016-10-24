@@ -1,4 +1,4 @@
-package MinimumWindowSubstring;
+package stringProblems.minimumWindowSubstring;
 
 import java.util.*;
 

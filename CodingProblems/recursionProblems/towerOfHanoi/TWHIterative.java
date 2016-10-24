@@ -1,4 +1,4 @@
-package TowerOfHanoi;
+package recursionProblems.towerOfHanoi;
 
 public class TWHIterative {
 	

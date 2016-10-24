@@ -1,4 +1,4 @@
-package countOccurence;
+package arrayProblems.countOccurenceInSortedArray;
 
 import java.util.StringJoiner;
 
