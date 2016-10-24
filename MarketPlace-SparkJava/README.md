@@ -64,27 +64,27 @@ At some point suppose notification system runs again. This time it should not ge
 ## System Design:
 ### Verbs
 System has been visualized in terms of RESTful APIs. See further for section **Sample Requests**:
-1. ***Add*** an InternetPlan (RESTApi support is not provided for this, but tested via unit test framework)
-2. ***Add/Update*** an User (see SampleRequest.txt )
-3. ***SignUp*** an existing User for an existing InternetPlan for a Threshold (see SampleRequest.txt )
-4. ***Un SignUp*** an already signed up user for a plan (RESTApi support is not provided for this, but tested via unit test framework).
-5. ***Get*** plan’s data and Update a plan’s price per month. This is the triggering action which registers relevant users to notification system (see SampleRequest.txt)
-6. ***Get*** information of all the notifications in the system (RESTApi support is not provided for this, but tested via unit test framework)
-7. ***Get*** information of all the notifications in the system for a User (RESTApi support is not provided for this, but tested via unit test framework)
-8. ***Generate*** and Clears all notifications from the system (see SampleRequest.txt )
+1. ***Add*** an InternetPlan (RESTApi support is not provided for this, but tested via unit test framework)  
+2. ***Add/Update*** an User (see SampleRequest.txt )  
+3. ***SignUp*** an existing User for an existing InternetPlan for a Threshold (see SampleRequest.txt )  
+4. ***Un SignUp*** an already signed up user for a plan (RESTApi support is not provided for this, but tested via unit test framework)   
+5. ***Get*** plan’s data and Update a plan’s price per month. This is the triggering action which registers relevant users to notification system (see SampleRequest.txt)  
+6. ***Get*** information of all the notifications in the system (RESTApi support is not provided for this, but tested via unit test framework)  
+7. ***Get*** information of all the notifications in the system for a User (RESTApi support is not provided for this, but tested via unit test framework)  
+8. ***Generate*** and Clears all notifications from the system (see SampleRequest.txt )  
 
 ### Components / Classes:
 Components are not designed in terms of Interfaces or abstract classes. In current problem scope I decided not to use it. In later versions I'll introduce it. Every class is concrete in nature. Singleton pattern are used basically because there is no database support. 
-1. **Main**: Definition of service end points. sparkjava web framework (http://sparkjava.com/) to have a light weight REST based system in place. You need to have Java 8 installed (needs java path variables configurations).
-2. **MarketPlace**: (Singleton) Maintains market place data – basically Users and Plans. This is also the main entry point of all logical operations (APIs) in the Market place system.
+1. **Main**: Definition of service end points. sparkjava web framework (http://sparkjava.com/) to have a light weight REST based system in place. You need to have Java 8 installed (needs java path variables configurations)  
+2. **MarketPlace**: (Singleton) Maintains market place data – basically Users and Plans. This is also the main entry point of all logical operations (APIs) in the Market place system.  
 3. **InternetPlan**: Encapsulate an internet plan. Encapsulates all the user who are signing up for a concrete plan.
-4. **User**: Encapsulates user information.
-5. **NotificationSystem**: (Singleton) maintains all the registered notification in the system at one point. This information is maintained at per user basis.
-6. **Tier**: Just an enum to represent Tier of an internet plan. Currently it is playing no role in any logic in the system.
-7. **Money**: Encapsulates the money in the system. Helps in representing price per month or threshold. Code for this is taken from internet.
-8. **AppConfig**: (Singleton) – Reads application configuration from the resources/config.properties file.
-9. **Logger**: (Singleton) – For logging purpose
-10. **AppUtil**: Couple of util functions.
+4. **User**: Encapsulates user information.  
+5. **NotificationSystem**: (Singleton) maintains all the registered notification in the system at one point. This information is maintained at per user basis.  
+6. **Tier**: Just an enum to represent Tier of an internet plan. Currently it is playing no role in any logic in the system.  
+7. **Money**: Encapsulates the money in the system. Helps in representing price per month or threshold. Code for this is taken from internet.  
+8. **AppConfig**: (Singleton) – Reads application configuration from the resources/config.properties file.  
+9. **Logger**: (Singleton) – For logging purpose  
+10. **AppUtil**: Couple of util functions.  
 
 ## Proposed Enhancements
 1. Introduce database/persistence
