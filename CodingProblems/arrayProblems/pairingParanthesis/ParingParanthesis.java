@@ -35,6 +35,47 @@ public class ParingParanthesis {
 		}
 		return output.toString();
 	}
+	
+	// stack based
+	public string MatchUsingStack(string input)
+	{
+		Stack<string> ph = new Stack<string>();
+		foreach(char c in input)
+		{
+			if(c.toString() == ")")
+			{
+				StringBuilder sb = new StringBuilder();
+				while(ph.isEmpty() && ph.Peek() != "(")
+				{
+					sb.Insert(0, ph.Pop());
+				}
+				// ph could be mepty
+				// sb could be empty
+				if(!ph.IsEmpty() && ph.Peek() != "(")
+				{
+					sb.Append(c);
+					sb.Insert(0, ph.Pop());
+				}
+				if(sb.ToString().Length() > 0)
+					ph.push(sb.ToString());
+			}
+			else 
+			{
+				ph.push(c)
+			}
+		}
+		
+		StringBuilder final = new StringBuilder();
+		while(!ph.isEmpty())
+		{
+			string ch = ph.Pop();
+			if(ch != "(" && ch != ")")
+			{
+				final.Insert(0, ch);
+			}
+		}
+		return final.ToString();
+	}
 
 	public static void main(String[] args) {
 		System.out.println("[" + ParingParanthesis.balancedParenthesis("(ab(xy)u)2)") + "]");
