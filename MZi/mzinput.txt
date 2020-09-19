@@ -1,0 +1,2 @@
+this is machine zone input 
+file and we are going to read these lines
