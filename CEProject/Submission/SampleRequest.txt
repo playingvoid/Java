@@ -1,0 +1,47 @@
+##All request are designed following in REST philosophy and can be easily
+##integrated with UI component. 
+
+##Kindly perform requests in following sequence to just test a basic use case
+
+##Please add as many user as possible
+##Add/update a user - email id used for user identification
+PUT
+http://localhost:4567/user
+
+{
+	"emailaddress" : "vraj@abc.com",
+	"firstname" : "Varun",
+	"lastname" : "Raj"
+}
+
+##Signup already added users
+POST
+http://localhost:4567/signup
+
+{
+	"emailaddress" : "vraj@abc.com",
+	"planname" : "att_r_medium",
+	"threshold" : "65"
+}
+
+
+##Change a plan - put request only updates the new pricepermonth
+##these request can be used by any update system. At each update
+##notification information gets inserted in a notification system
+##which can be used later to send notification 
+POST
+http://localhost:4567/planprice
+
+{
+	"planname" : "att_r_medium",
+	"pricepermonth" : "60",
+}
+
+
+##Get the notifications in the notification systems and clears out 
+##the notification system - ***WRONG GET PHILOSOPHY***. Will be changed
+##to post request in my next version
+GET
+http://localhost:4567/notifications
+
+

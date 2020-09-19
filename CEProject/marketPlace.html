@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marketplace</title>
+<script language="Javascript">
+var hostUrl = 'http://localhost:4567/';
+
+function createCORSRequest(method, url) {
+	var xhr = new XMLHttpRequest();
+	if ("withCredentials" in xhr) {
+		// XHR for Chrome/Firefox/Opera/Safari.
+		xhr.open(method, url, true);
+	} else if (typeof XDomainRequest != "undefined") {
+		// XDomainRequest for IE.
+		xhr = new XDomainRequest();
+		xhr.open(method, url);
+	} else {
+		// CORS not supported.
+		xhr = null;
+	}
+	return xhr;
+}
+
+function ajaxJSONGet(url, callback, control){
+	var xhr = createCORSRequest("GET", url);
+	xhr.onload = function() {
+		callback(xhr.responseText, control);
+		// process the response.
+	};
+	xhr.onerror = function() {
+		callback("There was an error!", control);
+	};
+	xhr.send();
+}
+
+function ajaxJSONPost(url, jsondata, callback, control){
+	var xhr = createCORSRequest("POST", url);
+	xhr.setRequestHeader('Content-Type', 'application/json');
+	xhr.onload = function() {
+		callback(xhr.responseText, control);
+	};
+	xhr.onerror = function() {
+		callback("There was an error!", control);
+	};
+	xhr.send(JSON.stringify(jsondata));
+}
+
+function ajaxJSONPut(url, jsondata, callback, control){
+	var xhr = createCORSRequest("PUT", url);
+	xhr.setRequestHeader('Content-Type', 'application/json');
+	xhr.onload = function() {
+		callback(xhr.responseText, control);
+	};
+	xhr.onerror = function() {
+		callback("There was an error!", control);
+	};
+	xhr.send(JSON.stringify(jsondata));
+}
+		
+function updatepage(responseMsg, control){
+    document.getElementById(control).value = JSON.parse(responseMsg);
+}
+
+function addUser(){
+	var user = {};
+	user.firstname	= document.getElementById("userFirstNameId").value;
+	user.lastname	= document.getElementById("userLastNameId").value;
+	user.emailaddress	= document.getElementById("userEmailAddressId").value;
+	ajaxJSONPut(hostUrl+"user", user, updatepage, "addUserResponseId");
+}
+
+function signUpUserForPlan(){
+	var signUpInfo = {};
+	signUpInfo.emailaddress = document.getElementById("userSignUpEmailId").value;
+	signUpInfo.planname = document.getElementById("userSignUpPlanNameId").value; 
+	signUpInfo.threshold = document.getElementById("userSignUpThresholdId").value; 
+	ajaxJSONPost(hostUrl+"signup", signUpInfo, updatepage, "signUpResponseId");
+}
+
+function getInternetPlan(){
+	var url = encodeURI(hostUrl+"internetplan/" +  document.getElementById("getPlanNameId").value);
+	ajaxJSONGet(url, updatepage, "planResponseId");
+}
+
+function updatePlanPricePerMonth(){
+	var priceChangeInfo = {};
+	priceChangeInfo.planname = document.getElementById("getPlanNameId").value;
+	priceChangeInfo.pricepermonth = document.getElementById("pricePerMonthId").value;
+	ajaxJSONPost(hostUrl+"planprice", priceChangeInfo, updatepage, "planResponseId");
+}
+
+function generateNotifications(){
+	ajaxJSONPost(hostUrl+"notifications", {}, updatepage, "generateNotificationsResponseId");
+}
+</script>
+</head>
+<body>
+<form name="userAddForm">
+  <p>
+  <h4>Add a user</h4>	
+  <table>
+	  <tr>
+		<td>First name:</td> <td><input id="userFirstNameId" type="text"/></td>  
+	  </tr>
+	  <tr>
+		<td>Last name:</td> <td><input id="userLastNameId" type="text"/></td>  
+	  </tr>
+	  <tr>
+		<td>Email:</td> <td><input id="userEmailAddressId" type="text"/></td>  
+	  </tr>
+	  <tr>
+		<td colspan="2"><input value="Add" type="button" onclick='JavaScript:addUser()'></td>
+	  </tr>
+	  <tr> 
+		<td colspan="2"><textarea id="addUserResponseId" rows="2" cols="60" > </textarea> </td> 
+	  </tr>
+  </table>
+  </p>
+</form>
+<hr/>
+<form name="userSignupForm">
+  <p>
+  <h4>Signup user for notification</h4>	
+  <table>
+	  <tr>
+		<td>User email:</td> <td><input id="userSignUpEmailId" type="text"/></td>  
+	  </tr>
+	  <tr>
+		<td>Plan name:</td> <td><input id="userSignUpPlanNameId" type="text"/></td>  
+	  </tr>
+	  <tr>
+		<td>Threshold:</td> <td><input id="userSignUpThresholdId" type="text"/></td>  
+	  </tr>
+	  <tr>
+		<td colspan="2"><input value="Signup" type="button" onclick='JavaScript:signUpUserForPlan()'></td>
+	  </tr>
+	  <tr> 
+		<td colspan="2"><textarea id="signUpResponseId" rows="3" cols="60" > </textarea> </td> 
+	  </tr>
+  </table>
+  </p>
+</form>
+<hr/>
+<form name="getPlanForm">
+  <h4>Get/Update Plan</h4>	
+  <table>
+	  <tr>
+		<td>Plan Name:</td> 
+		<td><input id="getPlanNameId" type="text"/></td>
+		<td><input value="Get" type="button" onclick='JavaScript:getInternetPlan()'></td>		
+	  </tr>
+	  <tr>
+		<td>Price per month:</td> 
+		<td><input id="pricePerMonthId" type="text"/></td>  
+		<td><input value="Update Price" type="button" onclick='JavaScript:updatePlanPricePerMonth()'></td>
+	  </tr>
+	  <tr> 
+		<td colspan="3"><textarea id="planResponseId" rows="4" cols="60"> </textarea> </td> 
+	  </tr>
+  </table>
+</form>
+<hr/>
+<form name="generateNotificationsForm">
+  <h4>Genetare Notifications</h4>	
+  <table>
+	  <tr>
+		<td><input value="Generate" type="button" onclick='JavaScript:generateNotifications()'></td>
+	  </tr>
+	  <tr> 
+		<td><textarea id="generateNotificationsResponseId" rows="10" cols="100"> </textarea> </td> 
+	  </tr>
+  </table>
+</form>
+</body>
+</html>

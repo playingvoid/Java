@@ -1,0 +1,109 @@
+[
+	{
+		"name": "att_r_small",
+		"tier": "residential",
+		"ppm": "30",
+		"ttdu": "5"
+	},
+	{
+		"name": "att_r_medium",
+		"tier": "residential",
+		"ppm": "70",
+		"ttdu": "20"
+	},
+	{
+		"name": "att_r_large",
+		"tier": "residential",
+		"ppm": "100",
+		"ttdu": "U"
+	},
+	{
+		"name": "att_s_small",
+		"tier": "smb",
+		"ppm": "500",
+		"ttdu": "1000"
+	},
+	{
+		"name": "att_s_medium",
+		"tier": "smb",
+		"ppm": "2000",
+		"ttdu": "3000"
+	},
+	{
+		"name": "att_s_large",
+		"tier": "smb",
+		"ppm": "3000",
+		"ttdu": "U"
+	},
+	{
+		"name": "att_c_small",
+		"tier": "commercial",
+		"ppm": "3000",
+		"ttdu": "5000"
+	},
+	{
+		"name": "att_c_medium",
+		"tier": "commercial",
+		"ppm": "5000",
+		"ttdu": "15000"
+	},
+	{
+		"name": "att_c_large",
+		"tier": "commercial",
+		"ppm": "8000",
+		"ttdu": "U"
+	}{
+		"name": "tm_r_small",
+		"tier": "residential",
+		"ppm": "30",
+		"ttdu": "5"
+	},
+	{
+		"name": "tm_r_medium",
+		"tier": "residential",
+		"ppm": "70",
+		"ttdu": "20"
+	},
+	{
+		"name": "tm_r_large",
+		"tier": "residential",
+		"ppm": "100",
+		"ttdu": "U"
+	},
+	{
+		"name": "tm_s_small",
+		"tier": "smb",
+		"ppm": "500",
+		"ttdu": "1000"
+	},
+	{
+		"name": "tm_s_medium",
+		"tier": "smb",
+		"ppm": "2000",
+		"ttdu": "3000"
+	},
+	{
+		"name": "tm_s_large",
+		"tier": "smb",
+		"ppm": "3000",
+		"ttdu": "U"
+	},
+	{
+		"name": "tm_c_small",
+		"tier": "commercial",
+		"ppm": "3000",
+		"ttdu": "5000"
+	},
+	{
+		"name": "tm_c_medium",
+		"tier": "commercial",
+		"ppm": "5000",
+		"ttdu": "15000"
+	},
+	{
+		"name": "tm_c_large",
+		"tier": "commercial",
+		"ppm": "8000",
+		"ttdu": "U"
+	}
+]
