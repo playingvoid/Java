@@ -20,7 +20,7 @@
 	<classpathentry kind="src" path="KSubset"/>
 	<classpathentry kind="src" path="SampeTest"/>
 	<classpathentry kind="src" path="KthElement"/>
-	<classpathentry kind="src" path="BlackrockInterview"/>
+	<classpathentry kind="src" path="BRProblems"/>
 	<classpathentry kind="src" path="EPI"/>
 	<classpathentry kind="src" path="FileSystemSimulation"/>
 	<classpathentry kind="src" path="SocialNetwork"/>
@@ -28,6 +28,10 @@
 	<classpathentry kind="src" path="ConcurrencyPractice"/>
 	<classpathentry kind="src" path="CodingProblems"/>
 	<classpathentry kind="src" path="Netsuite"/>
+	<classpathentry kind="src" path="Instacart"/>
+	<classpathentry kind="src" path="DominoEffect"/>
+	<classpathentry kind="src" path="MZinterview"/>
+	<classpathentry kind="src" path="EarnUpCodingChallenge"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>

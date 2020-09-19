@@ -1,0 +1,72 @@
+1. Array - Contiguous sequence sum to a given integer
+Rough code
+
+int currSum = 0, givenSum = 33;
+int startIndex = 0;
+for(int endIndex = 0 ; endIndex < array.lenght; endIndex++)
+{
+	currSum += array[endIndex];
+	
+	while(currSum > desiredSum && startIndex <= endIndex)
+	{
+		currSum -= array[startIndex];
+		startIndex++;
+	}
+	
+	if(currSum == desiredSum)
+	{
+		//Answer found
+		break;
+	}
+}
+==================================================
+2. Subset sum, recursion, form a set with the sum == K and return true is sum found
+
+bool SubsetSum(int[] inputSet, int givenSum, int inputIndex, ArrayList<Integer> output[])
+{
+	if(givenSum == 0) return true;
+	
+	if(inputSet == null || inputSet.length == 0) return false;
+	
+	if(givenSum < 0) return false;
+	
+	if(inputIndex == inputSet.length) return false;
+	
+	if(SubsetSum(inputSet, givenSum - inputSet[inputIndex], inputIndex + 1, output))
+	{
+		output.add(inputSet[inputIndex]);
+		return true;
+	}
+	
+	return SubsetSum(inputSet, givenSum, inputIndex + 1, output);
+	
+====================================================
+3. Level Order using queue - interesting
+
+void LevelOrder(Node root)
+{
+	if(root == null)
+		return;
+		
+	Queue<Node> Q = new LinkedList<>();
+	Q.add(root);
+	int height = 0;
+	while(1)
+	{
+		int qCount = Q.size();
+		if(qCount == 0)
+			return;
+		height ++;
+		while(qCount > 0)
+		{
+			Node curr = Q.remove();
+			System.out.println(curr.data + " ");
+			qCount--;
+			if(curr.left != null)
+				Q.add(curr.left);
+			if(curr.right != null)
+				Q.add(curr.right);
+		}
+		System.out.println();
+	}
+}

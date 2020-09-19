@@ -1,17 +1,17 @@
 package DemoSingleton;
 
-public class BigPughSingleton 
+public class BillPughSingleton 
 {
 	protected static final long serialVersionUID = 1L;
 	
-	private BigPughSingleton() {}
+	private BillPughSingleton() {}
 	
 	private static class LazyHolder 
 	{ 
-		private static final BigPughSingleton instance = new BigPughSingleton();
+		private static final BillPughSingleton instance = new BillPughSingleton();
 	}
 	
-	public static BigPughSingleton getInstance()
+	public static BillPughSingleton getInstance()
 	{
 		return LazyHolder.instance;
 	}

@@ -11,6 +11,8 @@ public class TestBinaryTree {
 		System.out.println();
 		btNode = BinaryTreeNode.createBinaryTree(new Integer[]{1, 2, 5,null,null,6, null,null,3,null,4,null,null});
 		BinaryTreeNode.preorderTraversalRecursive(btNode);
+		System.out.println();
+		BinaryTreeNode.inorderTraversalRecursive(btNode);
 	}
 
 }

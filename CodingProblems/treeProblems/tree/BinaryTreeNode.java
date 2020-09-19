@@ -24,6 +24,9 @@ public class BinaryTreeNode
 		return Integer.toString(this.value);
 	}
 	
+	/*
+	 * Recursive pre-order traversal for a binary tree
+	 */
 	public static void preorderTraversalRecursive(BinaryTreeNode root)
 	{
 		if(root == null)
@@ -33,6 +36,9 @@ public class BinaryTreeNode
 		preorderTraversalRecursive(root.right);
 	}
 	
+	/*
+	 * Recursive in-order traversal for a binary tree
+	 */
 	public static void inorderTraversalRecursive(BinaryTreeNode root)
 	{
 		if(root == null)
@@ -42,6 +48,9 @@ public class BinaryTreeNode
 		inorderTraversalRecursive(root.right);
 	}
 	
+	/*
+	 * Recursive post-order traversal for a binary tree
+	 */
 	public static void postorderTraversalRecursive(BinaryTreeNode root)
 	{
 		if(root == null)
@@ -51,9 +60,11 @@ public class BinaryTreeNode
 		System.out.print(root.value + "\t");
 	}
 	
-	//Expected to accept input as given by preorder traversal, each leaf node 
-	//should be marked as null.
-	//check the serialize/de-serialize example at: http://articles.leetcode.com/2010/09/serializationdeserialization-of-binary.html
+	/*
+	 * Expected to accept input as given by pre-order traversal, each leaf node should be marked as null.
+	 * check the serialize/de-serialize example at: 
+	 * http://articles.leetcode.com/2010/09/serializationdeserialization-of-binary.html
+	 */
 	public static BinaryTreeNode createBinaryTree(Integer[] array)
 	{
 		if(null == array) return null;

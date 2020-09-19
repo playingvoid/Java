@@ -6,6 +6,11 @@ import java.util.concurrent.locks.ReentrantLock;
 
 // Another approach one may take to make use of Lock and Condition 
 // (instead of synchronized, wait() and notifiyAll()) interfaces as follows
+
+/*
+ * TODO: http://www.javaworld.com/article/2078848/java-concurrency/java-concurrency-java-101-the-next-generation-java-concurrency-without-the-pain-part-2.html?page=2
+ */
+
 public class ThreadSafeQueue2<T>  
 {
 	private Node front, back;
