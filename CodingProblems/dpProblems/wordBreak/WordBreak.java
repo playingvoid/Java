@@ -1,4 +1,4 @@
-package dpProblems.wordBreak;
+package CodingProblems.dpProblems.wordBreak;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;

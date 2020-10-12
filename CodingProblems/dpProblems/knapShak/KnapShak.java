@@ -1,4 +1,4 @@
-package dpProblems.knapShak;
+package CodingProblems.dpProblems.knapShak;
 
 public class KnapShak {
 	

@@ -1,4 +1,4 @@
-package treeProblems.tree;
+package CodingProblems.treeProblems.tree;
 
 public class TestBinaryTree {
 	

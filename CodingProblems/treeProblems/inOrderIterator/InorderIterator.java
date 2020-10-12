@@ -1,7 +1,7 @@
-package treeProblems.inOrderIterator;
+package CodingProblems.treeProblems.InOrderIterator;
 import java.util.Stack;
 
-import treeProblems.tree.BinaryTreeNode;
+import CodingProblems.treeProblems.tree.BinaryTreeNode;
 
 public class InorderIterator 
 {

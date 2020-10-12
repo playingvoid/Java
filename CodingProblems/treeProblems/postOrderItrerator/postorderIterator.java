@@ -1,7 +1,7 @@
-package treeProblems.postOrderItrerator;
+package CodingProblems.treeProblems.PostOrderItrerator;
 
 import java.util.Stack;
-import treeProblems.tree.BinaryTreeNode;
+import CodingProblems.treeProblems.tree.BinaryTreeNode;
 
 public class postorderIterator 
 {
@@ -60,12 +60,12 @@ public class postorderIterator
 	}
 	
 	// Based on http://n00tc0d3r.blogspot.com/2013/08/implement-iterator-for-binarytree-iii.html
-	private void PostOrderAnother(Node root)
+	private void PostOrderAnother(BinaryTreeNode root)
 	{
-		Stack<Node> stack = new Stack<Node>();
-		Node curr = root;
+		Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
+		BinaryTreeNode current = root;
 		
-		while(curr != null || !stack.isEmpty())
+		while(current != null || !stack.isEmpty())
 		{
 			if(current != null)
 			{
@@ -78,7 +78,7 @@ public class postorderIterator
 			else
 			{
 				current = stack.pop();
-				visit(current);
+				//visit(current);
 				if(!stack.isEmpty())
 				{
 					var top = stack.peek();
@@ -94,11 +94,11 @@ public class postorderIterator
 	}
 	
 	// Following is wrong code 
-	private void PostOrderTraversalUsingSingleStack(Node root)
+	private void PostOrderTraversalUsingSingleStack(BinaryTreeNode root)
 	{
-		Stack<Node> postOrderStack = new Stack<Node>();
-		Node lastVisitedNode = null;
-		Node curr = root;
+		Stack<BinaryTreeNode> postOrderStack = new Stack<BinaryTreeNode>();
+		BinaryTreeNode lastVisitedNode = null;
+		BinaryTreeNode curr = root;
 		
 		while(postOrderStack != null || curr != null)
 		{
@@ -114,7 +114,7 @@ public class postorderIterator
 				curr = postOrderStack.pop();
 				if(curr.right == null || curr.right == lastVisitedNode)
 				{
-					visit(curr);
+					//visit(curr);
 					lastVisitedNode = curr;
 					curr = null;
 				}

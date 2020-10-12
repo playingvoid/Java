@@ -1,7 +1,7 @@
-package treeProblems.levelOrderSerializeDeserialize;
+package CodingProblems.treeProblems.levelOrderSerializeDeserialize;
 
 import java.util.*;
-import treeProblems.tree.BinaryTreeNode;
+import CodingProblems.treeProblems.tree.BinaryTreeNode;
 
 public class LevelOrderSerializeDeserialize {
 	

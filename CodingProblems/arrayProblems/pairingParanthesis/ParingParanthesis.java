@@ -1,4 +1,6 @@
-package arrayProblems.pairingParanthesis;
+package CodingProblems.arrayProblems.pairingParanthesis;
+
+import java.util.Stack;
 
 public class ParingParanthesis {
 	static int getRightParenCout(String input) {
@@ -37,44 +39,44 @@ public class ParingParanthesis {
 	}
 	
 	// stack based
-	public string MatchUsingStack(string input)
+	public String MatchUsingStack(String input)
 	{
-		Stack<string> ph = new Stack<string>();
-		foreach(char c in input)
+		Stack<String> ph = new Stack<String>();
+		for(Character c : input.toCharArray())
 		{
 			if(c.toString() == ")")
 			{
 				StringBuilder sb = new StringBuilder();
-				while(ph.isEmpty() && ph.Peek() != "(")
+				while(ph.isEmpty() && ph.peek() != "(")
 				{
-					sb.Insert(0, ph.Pop());
+					sb.insert(0, ph.pop());
 				}
 				// ph could be mepty
 				// sb could be empty
-				if(!ph.IsEmpty() && ph.Peek() != "(")
+				if(!ph.isEmpty() && ph.peek() != "(")
 				{
-					sb.Append(c);
-					sb.Insert(0, ph.Pop());
+					sb.append(c);
+					sb.insert(0, ph.pop());
 				}
-				if(sb.ToString().Length() > 0)
-					ph.push(sb.ToString());
+				if(sb.toString().length() > 0)
+					ph.push(sb.toString());
 			}
 			else 
 			{
-				ph.push(c)
+				ph.push(c.toString());
 			}
 		}
 		
-		StringBuilder final = new StringBuilder();
+		StringBuilder finalOutput = new StringBuilder();
 		while(!ph.isEmpty())
 		{
-			string ch = ph.Pop();
+			String ch = ph.pop();
 			if(ch != "(" && ch != ")")
 			{
-				final.Insert(0, ch);
+				finalOutput.insert(0, ch);
 			}
 		}
-		return final.ToString();
+		return finalOutput.toString();
 	}
 
 	public static void main(String[] args) {

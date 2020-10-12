@@ -1,4 +1,4 @@
-package arrayProblems.longestMonotonic;
+package CodingProblems.arrayProblems.longestMonotonic;
 
 public class MonotonicArray 
 {

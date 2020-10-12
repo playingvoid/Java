@@ -1,4 +1,4 @@
-package arrayProblems.slidingWindowMax;
+package CodingProblems.arrayProblems.slidingWindowMax;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
