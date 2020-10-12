@@ -1,3 +1,5 @@
+package CEProject.Submission.marketplaceApp.src.main.java;
+
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Properties;
