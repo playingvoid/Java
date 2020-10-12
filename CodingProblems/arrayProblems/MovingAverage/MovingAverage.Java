@@ -1,7 +1,8 @@
 Please use this Google doc to code during your interview. To free your hands for coding, we recommend that you use a headset or a phone with speaker option.
 
 
-Q. When drawing a timeseries graph, you sometimes want to "smooth out" the line. Instead of plotting the Y-value of each data point, you want to plot the average of the last N Y-values. Your task is to design a class to handle the computation of a moving average. The number N of values to average is called the "window".
+Q. When drawing a timeseries graph, you sometimes want to "smooth out" the line. Instead of plotting the Y-value of each data point, you want to plot the average of 
+the last N Y-values. Your task is to design a class to handle the computation of a moving average. The number N of values to average is called the "window".
 
 
 

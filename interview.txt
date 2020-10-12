@@ -1,0 +1,6 @@
+MZI => MZInterview
+SQI => Square Interview
+NetSi -> Netsuite Interview
+SF => Salesforce 
+Inst => Instacart
+CEProject => ChooseEnergyProject
