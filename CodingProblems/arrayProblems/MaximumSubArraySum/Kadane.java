@@ -1,2 +1,5 @@
-package arrayProblems.MaximumSubArraySum;public class Kadane {
+package arrayProblems.MaximumSubArraySum;
+
+public class Kadane {
+
 }
