@@ -3,7 +3,7 @@ Given a set of a numbers and a value sum, check if a non empty sub set exist whi
  */
 package recursionProblems;
 
-public class SubsetSum {
+public class subsetSum {
     public static boolean isSum(int[] numbers, int sum, int startIndex, boolean numberConsidered){
         if(numberConsidered && sum == 0)
             return true;

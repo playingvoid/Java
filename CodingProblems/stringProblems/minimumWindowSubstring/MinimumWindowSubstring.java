@@ -80,6 +80,10 @@ public class MinimumWindowSubstring {
 		}
 		return neededMap;
 	}
+	
+	public String minimumWindowSubstring(String input, String needed){
+		return null;
+	}
 
 	public static void main(String[] args){
 		System.out.println(findMimimumWindowSubstring("this is a test string", "tist"));
